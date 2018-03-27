@@ -3,14 +3,14 @@ import java.util.Scanner;
 class Divide{
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
-        float left, right, result;
+        double left, right, result;
 
-        left = scan.nextFloat();
-        right = scan.nextFloat();
+        left = scan.nextDouble();
+        right = scan.nextDouble();
 
         result = left / right;
 
-        System.out.printf("%.9f\n", result);
+        System.out.println(result);
         
         scan.close();
     }
