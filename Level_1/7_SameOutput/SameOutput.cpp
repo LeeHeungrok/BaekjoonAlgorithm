@@ -7,7 +7,7 @@ int main(){
     int count = 0;
 
     while(count < 100){
-        cin>>input;
+        getline(cin, input);
         if(input.length() > 100){
             input.erase(100, input.length() - 100);
         }
