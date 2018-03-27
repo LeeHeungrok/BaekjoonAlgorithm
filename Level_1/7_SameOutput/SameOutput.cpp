@@ -12,6 +12,7 @@ int main(){
             input.erase(100, input.length() - 100);
         }
         cout<<input<<endl;
+        count ++;
     }
     return 0;
 }
