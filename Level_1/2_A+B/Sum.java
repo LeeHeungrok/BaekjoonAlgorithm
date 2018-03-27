@@ -10,5 +10,7 @@ class Sum{
 
         result = left + right;
         System.out.println(result);
+
+        scan.close();
     }
 }

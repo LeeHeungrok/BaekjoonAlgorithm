@@ -11,5 +11,7 @@ class Sub{
         result = left - right;
 
         System.out.println(result);
+        
+        scan.close();
     }
 }
