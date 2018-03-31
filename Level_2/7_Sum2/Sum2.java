@@ -11,5 +11,7 @@ class Sum2{
         result = left + right;
 
         System.out.println(result);
+        
+        scan.close();
     }
 }

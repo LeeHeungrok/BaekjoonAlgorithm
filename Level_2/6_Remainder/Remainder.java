@@ -14,5 +14,7 @@ class Remainder{
         System.out.println((left % right + center % right) % right);
         System.out.println((left * center) % right);
         System.out.println((left % right * center % right) % right);
+
+        scan.close();
     }
 }
