@@ -6,23 +6,46 @@ class SugarDelivery{
 
         final int THREE_KG = 3;
         final int FIVE_KG = 5;
-        int suger, count = 0;
+        int input;
+        int[] suger, count;
 
-        suger = scan.nextInt();
+        input = scan.nextInt();
+        suger = new int[2];
+        count = new int[2];
+        for(int i = 0; i < 2; i ++){
+            suger[i] = input;
+            count[i] = 0;
+        }
+        
+        count[0] += suger[0] / FIVE_KG;
+        suger[0] = suger[0] % FIVE_KG;
+        count[0] += suger[0] / THREE_KG;
+        suger[0] = suger[0] % THREE_KG;
+        System.out.println(suger[0]);
+        System.out.println(count[0]);
 
-        count = suger / FIVE_KG;
+        count[1] += suger[1] / THREE_KG;
+        suger[1] = suger[1] % THREE_KG;
+        System.out.println(suger[1]);
+        count[1] += suger[1] / FIVE_KG;
+        suger[1] = suger[1] % FIVE_KG;
+        System.out.println(suger[1]);
+        System.out.println(count[1]);
 
-        suger = suger % FIVE_KG;
+        for(int i = 0; i < 2; i ++){
+            if(suger[i] != 0){
+                suger[i] = 999;
+            }
+        }
 
-        count = suger / THREE_KG;
-
-        suger = suger % THREE_KG;
-
-        if(suger != 0){
-            System.out.println(-1);
+        if(suger[0] > suger[1]){
+            System.out.println(count[1]);
+        }
+        else if(suger[0] < suger[1]) {
+            System.out.println(count[0]);
         }
         else {
-            System.out.println(count);
+            System.out.println(-1);
         }
         
         scan.close();
