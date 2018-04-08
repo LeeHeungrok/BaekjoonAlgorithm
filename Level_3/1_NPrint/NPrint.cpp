@@ -7,7 +7,8 @@ int main(){
     cin>>input;
 
     for(index = 1; index <= input; index ++){
-        cout<<index<<endl;
+        cout<<index<<"\n";
     }
+
     return 0;
 }
