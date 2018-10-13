@@ -4,22 +4,21 @@
 using namespace std;
 
 int main(void){
-    vector<string> days = {"SUN", "MON", "TUE", "WEN", "THU", "FRI", "SAT"};
-    vector<int> daysNumber = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    int totaldaysNumber, inputMonth, inputDay;
-
-    
+    vector<string> days = {"SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"};
+    vector<int> daysNumber = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    int totaldaysNumber = 0;
+    int inputMonth, inputDay;
 
     cin>>inputMonth;
     cin>>inputDay;
 
-    for(int index = 0; index < inputMonth; index ++){
+    for(int index = 1; index < inputMonth; index ++){
         totaldaysNumber += daysNumber[index];
     }
 
     totaldaysNumber += inputDay;
 
-    cout<<days[totaldaysNumber % 7];
+    cout<<days[totaldaysNumber % 7]<<endl;
 
     return 0;
 }
