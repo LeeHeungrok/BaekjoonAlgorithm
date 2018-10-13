@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <math.h>
 
 using namespace std;
 
@@ -25,8 +26,8 @@ int main(void){
             if(numbers[index] > result)
                 count ++;
         }
-
-        cout<<(float)count/(float)gradeNumber*100<<endl;
+        result = (float)count/(float)gradeNumber*100;
+        cout<< round(result * 1000) / 1000<<"%"<<endl;
         numbers.clear();
         result = 0;
         count = 0;
