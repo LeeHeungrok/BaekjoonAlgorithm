@@ -5,14 +5,16 @@
 using namespace std;
 
 int main(void){
-    int testCase, gradeNumber, temp, count = 0;
-    float result = 0;
+    int testCase, gradeNumber, temp, count;
+    float result;
     vector<int> numbers;
 
     cin>>testCase;
 
     for(int start = 0; start < testCase; start ++){
         cin>>gradeNumber;
+        result = 0;
+        count = 0;
         
         for(int index = 0; index < gradeNumber; index ++){
             cin>>temp;
@@ -22,14 +24,12 @@ int main(void){
         
         result = result / (float)gradeNumber;
 
-        for(int index = 0; index <gradeNumber; index ++){
+        for(int index = 0; index < gradeNumber; index ++){
             if(numbers[index] > result)
                 count ++;
         }
-        result = (float)count/(float)gradeNumber*100;
-        cout<< round(result * 1000) / 1000<<"%"<<endl;
+        result = (float)count*100/(float)gradeNumber;
+        printf("%.3f%%\n", result);
         numbers.clear();
-        result = 0;
-        count = 0;
     }
 }
