@@ -22,7 +22,7 @@ int findNumber(int number){
     int first;
     int second;
     int third;
-    int result = 99;
+    int result = (number == 1000) ? 98 : 99;
 
     for(int index = 100; index <= number; index ++){
         first = index / 100 % 10;
@@ -33,6 +33,5 @@ int findNumber(int number){
             result ++;
         }
     }
-
     return result;
 }
