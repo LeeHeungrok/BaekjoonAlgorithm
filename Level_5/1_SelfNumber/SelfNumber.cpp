@@ -17,6 +17,8 @@ int main(void){
             cout<<index<<endl;
         }
     }
+
+    return 0;
 }
 
 int selfNumber(int digit){
