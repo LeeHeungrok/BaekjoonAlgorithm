@@ -18,6 +18,7 @@
         "type_traits": "cpp",
         "typeinfo": "cpp",
         "vector": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "__split_buffer": "cpp"
     }
 }
