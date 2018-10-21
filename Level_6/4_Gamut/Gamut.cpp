@@ -21,12 +21,15 @@ int main(void){
 string gamut(vector<int> gam){
     int check = 0;
     for(int index = 1; index < gam.size(); index ++){
+        if(check > check + gam[index] - gam[index - 1]){
+            return "mixed";
+        }
         check += gam[index] - gam[index - 1];
     }
-    if(check == gam.size() - 1){
+    if(check > 0){
         return "ascending";
     }
-    else if(check == -(gam.size() - 1)){
+    else if(check < 0){
         return "descending";
     }
     else {
