@@ -19,20 +19,32 @@ int main(void){
 }
 
 string gamut(vector<int> gam){
-    int check = 0;
-    for(int index = 1; index < gam.size(); index ++){
-        if(check > check + gam[index] - gam[index - 1]){
-            return "mixed";
-        }
-        check += gam[index] - gam[index - 1];
-    }
-    if(check > 0){
+    vector<int> check(gam);
+    sort(check.begin(), check.end());
+    if(gam == check){
         return "ascending";
     }
-    else if(check < 0){
+
+    sort(check.begin(), check.end(), greater<int>());
+    if(gam == check){
         return "descending";
     }
-    else {
-        return "mixed";
-    }
+
+    return "mixed";
+    // int check = 0;
+    // for(int index = 1; index < gam.size(); index ++){
+    //     if(check > check + gam[index] - gam[index - 1]){
+    //         return "mixed";
+    //     }
+    //     check += gam[index] - gam[index - 1];
+    // }
+    // if(check > 0){
+    //     return "ascending";
+    // }
+    // else if(check < 0){
+    //     return "descending";
+    // }
+    // else {
+    //     return "mixed";
+    // }
 }
