@@ -16,7 +16,9 @@ int main(void){
 
     for(int index = 0; index < inputAlphabet.length(); index ++){
         numberTransfer = inputAlphabet[index] - 97;
-        alphabet[numberTransfer] = index;
+        if(alphabet[numberTransfer] == -1){
+            alphabet[numberTransfer] = index;
+        }
     }
 
     for(int index = 0; index < ALPHABET_LENGTH; index ++){
