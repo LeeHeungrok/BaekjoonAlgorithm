@@ -20,6 +20,10 @@
         "vector": "cpp",
         "algorithm": "cpp",
         "__split_buffer": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "__bit_reference": "cpp",
+        "__tree": "cpp",
+        "map": "cpp",
+        "utility": "cpp"
     }
 }
