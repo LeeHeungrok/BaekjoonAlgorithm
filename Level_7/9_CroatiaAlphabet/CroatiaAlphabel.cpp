@@ -6,7 +6,6 @@ using namespace std;
 int main(void){
     string input;
     string croatia[8] = {"c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z="};
-    int count = 0;
 
     cin >> input;
     
