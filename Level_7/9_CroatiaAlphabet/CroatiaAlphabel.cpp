@@ -14,7 +14,6 @@ int main(void){
         size_t pos = 0;
         while(pos < input.length()){
             if((pos = input.find(croatia[index], pos)) != string::npos){
-                cout<<input[pos]<<endl;
                 input.replace(pos, croatia[index].length(), "*");
             }
         }
