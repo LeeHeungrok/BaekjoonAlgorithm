@@ -13,22 +13,23 @@ int main(void){
     return 0;
 }
 
-void findFaction(int numb){
-    int temp, checkSon = 0, checkNumber = numb;
+void findFaction(const int numb){
+    int temp, checkSon = 1, checkNumber = numb;
     
-    for(int i = 1; i <= checkNumber; i ++){
-        temp = numb - i;
-        checkSon ++;
+    for(int i = 1; i <= numb; i ++){
+        temp = checkNumber - i;
+       
         if(temp < i){
             break;
         }
-        numb -= i;
+        checkSon ++;
+        checkNumber -= i;
     }
 
     if(checkSon % 2 == 0){
-        cout<< numb << "/" << checkSon - (numb - 1) << endl;
+        cout<< checkNumber << "/9" << checkSon - (checkNumber - 1) << endl;
     }
     else {
-        cout<< checkSon - (numb - 1) << "/" << numb << endl;
+        cout<< checkSon - (checkNumber - 1) << "/8" << checkNumber << endl;
     }
 }

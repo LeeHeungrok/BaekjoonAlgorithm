@@ -5,14 +5,24 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "java",
-            "name": "Debug (Launch)",
+            "name": "cpp build and debug active file",
+            "type": "cppdbg",
             "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "console": "internalConsole",
-            "stopOnEntry": false,
-            "mainClass": "",
-            "args": ""
+            "environment": [],
+            "internalConsoleOptions": "openOnSessionStart",
+            "logging": {
+                "moduleLoad": false,
+                "programOutput": true,
+                "trace": false
+            },
+            "showDisplayString": false,
+            "externalConsole": true,
+            "MIMode": "lldb",
+            "preLaunchTask": "build"
         }
     ]
 }
