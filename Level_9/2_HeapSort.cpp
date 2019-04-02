@@ -11,7 +11,7 @@ unsigned int InputInt()
     {
         cin >> iInput;
 
-        if(cin.fail())
+        if (cin.fail())
         {
             cin.clear();
             cin.ignore(!024, '\n');
